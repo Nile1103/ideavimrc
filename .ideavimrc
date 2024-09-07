@@ -61,6 +61,9 @@ set idearefactormode=keep
 nnoremap <esc><esc> :nohlsearch<CR>
 " easymotion 快速跳转
 map s <Plug>(easymotion-s)
+map f <Plug>(easymotion-f)
+map F <Plug>(easymotion-F)
+
 " 前一个方法
 nmap [f <Action>(MethodUp)
 " 后一个方法
