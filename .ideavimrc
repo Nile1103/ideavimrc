@@ -73,14 +73,14 @@ map F <Plug>(easymotion-F)
 map t <Plug>(easymotion-t)
 map T <Plug>(easymotion-T)
 " 前一个方法
-nmap [f <Action>(MethodUp)
+nmap [[ <Action>(MethodUp)
 " 后一个方法
-nmap ]f <Action>(MethodDown)
+nmap ]] <Action>(MethodDown)
 
 noremap <Leader>p "0p
 vnoremap Y "+y
-vnoremap J :action MoveStatementDown<CR>
-vnoremap K :action MoveStatementUp<CR>
+vnoremap <C-j> :action MoveStatementDown<CR>
+vnoremap <C-k> :action MoveStatementUp<CR>
 inoremap <C-j> <Esc>:action MoveStatementDown<CR>i
 inoremap <C-k> <Esc>:action MoveStatementUp<CR>i
 " 共享系统粘贴板
