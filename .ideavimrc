@@ -44,6 +44,7 @@ vnoremap H ^
 nnoremap H ^
 vnoremap L $
 inoremap jk <esc>
+
 " nerdtre
 nnoremap <leader>e :NERDTreeFocus<CR>
 " 垂直分屏
@@ -56,6 +57,8 @@ nmap <c-j> <c-w>j
 nmap <c-k> <c-w>k
 nmap <c-l> <c-w>l
 
+nmap U :action $Redo<CR>
+
 nnoremap <C-s> :w<CR>
 vnoremap <C-s> :w<CR>
 " Idea specific settings ------------------
@@ -67,6 +70,8 @@ nnoremap <esc><esc> :nohlsearch<CR>
 map s <Plug>(easymotion-s)
 map f <Plug>(easymotion-f)
 map F <Plug>(easymotion-F)
+map t <Plug>(easymotion-t)
+map T <Plug>(easymotion-T)
 " 前一个方法
 nmap [f <Action>(MethodUp)
 " 后一个方法
@@ -117,7 +122,10 @@ noremap <leader>j <ESC>:action GotoNextError<CR>
 noremap <leader>k <ESC>:action GotoPreviousError<CR>
 " build and compile code
 nnoremap <leader>mr :action Maven.Reimport<CR>
-vnoremap <leader>em :action ExtractMethod<CR>
+vnoremap <C-m> :action ExtractMethod<CR>
+
+nnoremap <leader>v :action IntroduceVariable<CR>
+vnoremap <leader>v :action IntroduceVariable<CR>
 
 nnoremap <leader>tr :action CloseAllToTheRight<CR>
 nnoremap <leader>tl :action CloseAllToTheLeft<CR>
@@ -139,8 +147,8 @@ nnoremap gd :action GotoDeclaration<CR>
 nnoremap gf :action FileStructurePopup<CR>
 
 " code actions
-nnoremap U :action FindUsages<CR>
-nnoremap R :action RenameElement<CR>
+nnoremap <leader>u :action FindUsages<CR>
+nnoremap <C-r> :action RenameElement<CR>
 nnoremap == :action ReformatCode<CR>
 vnoremap = :action ReformatCode<CR>
 nnoremap -- :action OptimizeImports<CR>
