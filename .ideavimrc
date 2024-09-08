@@ -38,12 +38,6 @@ set keep-english-in-normal
 set NERDTree
 " 使用寄存器替换，不会更改寄存器内容 [count]["x]gr{motion}
 set ReplaceWithRegister
-" 基础按键映射
-nnoremap L $
-vnoremap H ^
-nnoremap H ^
-vnoremap L $
-inoremap jk <esc>
 
 " nerdtre
 nnoremap <leader>e :NERDTreeFocus<CR>
@@ -78,7 +72,7 @@ nmap [[ <Action>(MethodUp)
 nmap ]] <Action>(MethodDown)
 
 noremap <Leader>p "0p
-vnoremap Y "+y
+map Y y$
 vnoremap <C-j> :action MoveStatementDown<CR>
 vnoremap <C-k> :action MoveStatementUp<CR>
 inoremap <C-j> <Esc>:action MoveStatementDown<CR>i
@@ -88,9 +82,9 @@ set clipboard=unnamed
 set clipboard+=ideaput
 
 " 下一个tab
-nnoremap tm gt
+nnoremap L gt
 " 上一个tab
-nnoremap tn gT
+nnoremap H gT
 
 " insert 模式下光标移动
 inoremap <C-a> <Home>
