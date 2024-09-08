@@ -51,6 +51,9 @@ nmap <c-j> <c-w>j
 nmap <c-k> <c-w>k
 nmap <c-l> <c-w>l
 
+nmap <C-,> ^
+nmap <C-.> $
+
 nmap U :action $Redo<CR>
 
 nnoremap <C-s> :w<CR>
