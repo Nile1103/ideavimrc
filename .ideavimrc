@@ -87,8 +87,8 @@ nnoremap L gt
 nnoremap H gT
 
 " insert 模式下光标移动
-inoremap <C-a> <Home>
-inoremap <C-e> <End>
+inoremap <c-e> <c-o>$
+inoremap <c-a> <c-o>^
 inoremap <C-d> <Delete>
 
 nnoremap <leader>t :action ActivateTerminalToolWindow<CR>
