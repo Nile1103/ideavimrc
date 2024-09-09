@@ -119,8 +119,11 @@ noremap <leader>j <ESC>:action GotoNextError<CR>
 noremap <leader>k <ESC>:action GotoPreviousError<CR>
 " build and compile code
 nnoremap <leader>mr :action Maven.Reimport<CR>
+"Refactor
+nnoremap <Space>n :action Inline<CR>
+vnoremap <Space>n :action Inline<CR>
 vnoremap <C-m> :action ExtractMethod<CR>
-
+nnoremap <C-r> :action RenameElement<CR>
 nnoremap <leader>v :action IntroduceVariable<CR>
 vnoremap <leader>v :action IntroduceVariable<CR>
 
@@ -145,7 +148,6 @@ nnoremap gf :action FileStructurePopup<CR>
 
 " code actions
 nnoremap <leader>u :action FindUsages<CR>
-nnoremap <C-r> :action RenameElement<CR>
 nnoremap == :action ReformatCode<CR>
 vnoremap = :action ReformatCode<CR>
 nnoremap -- :action OptimizeImports<CR>
